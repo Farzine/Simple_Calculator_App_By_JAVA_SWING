@@ -180,6 +180,22 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
             num1 = result;
         }
 
+        // function of clear button
+        if(e.getSource() == clrButton)
+        {
+            textField.setText("");
+        }
+
+        //function of delete button
+        if(e.getSource() == decButton)
+        {
+            String string = textField.getText();
+            textField.setText("");
+            for(int i=0; i<string.length()-1; i++)
+            {
+                textField.setText(textField.getText()+string.charAt(i));
+            }
+        }
 
     }
 }
