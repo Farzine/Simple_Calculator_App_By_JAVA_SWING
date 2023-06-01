@@ -8,9 +8,9 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
     JFrame frame; // creating apps frame variable
     JTextField textField; // creating calculator display variable
     JButton[] numberButtons = new JButton[10]; // declaring number button variable
-    JButton[] functionButtons = new JButton[8]; // declaring function button variable
+    JButton[] functionButtons = new JButton[9]; // declaring function button variable
     JButton addButton, subButton, mulButton, divButton; // declaring operator button variable
-    JButton decButton, equButton, delButton, clrButton;
+    JButton decButton, equButton, delButton, clrButton, negButton;
 
     JPanel panel;
 
@@ -41,6 +41,7 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
         equButton = new JButton("=");
         delButton = new JButton("Delete");
         clrButton = new JButton("Clear");
+        negButton = new JButton("(-)");
 
         // puts buttons in function array
         functionButtons[0] = addButton;
@@ -51,9 +52,10 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
         functionButtons[5] = equButton;
         functionButtons[6] = delButton;
         functionButtons[7] = clrButton;
+        functionButtons[8] = negButton;
 
         //functions buttons loop
-        for(int i=0; i<8; i++)
+        for(int i=0; i<9; i++)
         {
             functionButtons[i].addActionListener(this);
             functionButtons[i].setFont(myFont);
@@ -69,8 +71,9 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
             numberButtons[i].setFocusable(false);
         }
 
-        delButton.setBounds(50,430,145,50); // delete button frame position
-        clrButton.setBounds(205, 430, 145,50); // clear button frame position
+        negButton.setBounds(50,430,100,50);
+        delButton.setBounds(150,430,100,50); // delete button frame position
+        clrButton.setBounds(250, 430, 100,50); // clear button frame position
 
         //creating buttons backgrounds panel
         panel = new JPanel();
@@ -103,7 +106,9 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
         panel.add(divButton);
 
 
+
         frame.add(panel);// add button background panel to the frame
+        frame.add(negButton);// add negative button to the panel
         frame.add(delButton);// add delete button to the frame
         frame.add(clrButton);// add clear button to the frame
         frame.add(textField); // add display of calculator in the app frame
@@ -195,6 +200,14 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
             {
                 textField.setText(textField.getText()+string.charAt(i));
             }
+        }
+
+        //negative button function
+        if(e.getSource() == negButton)
+        {
+            double temp = Double.parseDouble(textField.getText());
+            temp *= -1;
+            textField.setText(String.valueOf(temp));
         }
 
     }
