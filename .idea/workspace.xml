@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c60077e-19e1-42d3-a24d-9f03336af176" name="Changes" comment="added delete and clear button, and added buttons background panel">
+    <list default="true" id="7c60077e-19e1-42d3-a24d-9f03336af176" name="Changes" comment="adding all button to the panel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
     </list>
@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685595089353</updated>
-      <workItem from="1685595091558" duration="6841000" />
+      <workItem from="1685595091558" duration="8660000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the Main class name to Calculator">
       <created>1685595640409</created>
@@ -104,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685610169511</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adding all button to the panel">
+      <created>1685611198816</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685611198816</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +124,7 @@
     <MESSAGE value="set the display text field frame of calculator" />
     <MESSAGE value="initializing buttons" />
     <MESSAGE value="added delete and clear button, and added buttons background panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="added delete and clear button, and added buttons background panel" />
+    <MESSAGE value="adding all button to the panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding all button to the panel" />
   </component>
 </project>

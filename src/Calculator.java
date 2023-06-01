@@ -117,6 +117,69 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        for(int i=0; i<10; i++)
+        {
+            if(e.getSource() == numberButtons[i]) // get numbers input to the calculator display
+            {
+                textField.setText(textField.getText().concat(String.valueOf(i)));
+            }
+        }
+
+        if(e.getSource() == decButton)// get . (point) input to the display
+        {
+            textField.setText(textField.getText().concat("."));
+        }
+
+        if(e.getSource() == addButton)// get + (add) input to the display
+        {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '+';
+            textField.setText(" ");
+        }
+
+        if(e.getSource() == subButton)// get - (sub) input to the display
+        {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '-';
+            textField.setText(" ");
+        }
+
+        if(e.getSource() == mulButton)// get * (mul) input to the display
+        {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '*';
+            textField.setText(" ");
+        }
+
+        if(e.getSource() == mulButton)// get / (div) input to the display
+        {
+            num1 = Double.parseDouble(textField.getText());
+            operator = '/';
+            textField.setText(" ");
+        }
+
+        if(e.getSource() == equButton) // solving equation
+        {
+            num2 = Double.parseDouble(textField.getText());
+            switch (operator)
+            {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case'*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+            textField.setText(String.valueOf(result));
+            num1 = result;
+        }
+
 
     }
 }
