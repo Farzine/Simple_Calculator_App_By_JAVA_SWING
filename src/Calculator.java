@@ -14,7 +14,7 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
 
     JPanel panel;
 
-    Font myFont = new Font("Ink free", Font.BOLD,40); // declaring font style
+    Font myFont = new Font("Arial Black", Font.BOLD,40); // declaring font style
 
     double num1=0, num2=0, result=0; // declaring variable for solve the calculation
     char operator; // declaring operator variable to contain the operator during solving equation
