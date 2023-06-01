@@ -78,6 +78,30 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
         panel.setLayout(new GridLayout(4,4,10,10));
         panel.setBackground(Color.GRAY);
 
+        // added 1 2 3 button to the panel and add button
+        panel.add(numberButtons[1]);
+        panel.add(numberButtons[2]);
+        panel.add(numberButtons[3]);
+        panel.add(addButton);
+
+        // added 4 5 6 button to the panel and sub button
+        panel.add(numberButtons[4]);
+        panel.add(numberButtons[5]);
+        panel.add(numberButtons[6]);
+        panel.add(subButton);
+
+        // added 7 8 9 button to the panel and mul button
+        panel.add(numberButtons[7]);
+        panel.add(numberButtons[8]);
+        panel.add(numberButtons[9]);
+        panel.add(mulButton);
+
+        // added the other buttons
+        panel.add(decButton);
+        panel.add(numberButtons[0]);
+        panel.add(equButton);
+        panel.add(divButton);
+
 
         frame.add(panel);// add button background panel to the frame
         frame.add(delButton);// add delete button to the frame
