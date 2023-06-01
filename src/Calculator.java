@@ -52,8 +52,37 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
         functionButtons[6] = delButton;
         functionButtons[7] = clrButton;
 
+        //functions buttons loop
+        for(int i=0; i<8; i++)
+        {
+            functionButtons[i].addActionListener(this);
+            functionButtons[i].setFont(myFont);
+            functionButtons[i].setFocusable(false); // for ignore outliner of the buttons
+        }
 
-        frame.add(textField);
+        //number buttons loop
+        for(int i=0; i<10; i++)
+        {
+            numberButtons[i] = new JButton(String.valueOf(i));
+            numberButtons[i].addActionListener(this);
+            numberButtons[i].setFont(myFont);
+            numberButtons[i].setFocusable(false);
+        }
+
+        delButton.setBounds(50,430,145,50); // delete button frame position
+        clrButton.setBounds(205, 430, 145,50); // clear button frame position
+
+        //creating buttons backgrounds panel
+        panel = new JPanel();
+        panel.setBounds(50,100,300,300);
+        panel.setLayout(new GridLayout(4,4,10,10));
+        panel.setBackground(Color.GRAY);
+
+
+        frame.add(panel);// add button background panel to the frame
+        frame.add(delButton);// add delete button to the frame
+        frame.add(clrButton);// add clear button to the frame
+        frame.add(textField); // add display of calculator in the app frame
         frame.setVisible(true);
     }
 
