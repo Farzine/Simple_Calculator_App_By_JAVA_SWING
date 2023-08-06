@@ -39,8 +39,8 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
         divButton = new JButton("/");
         decButton = new JButton(".");
         equButton = new JButton("=");
-        delButton = new JButton("Delete");
-        clrButton = new JButton("Clear");
+        delButton = new JButton("Dlt");
+        clrButton = new JButton("Clr");
         negButton = new JButton("(-)");
 
         // puts buttons in function array
@@ -79,7 +79,7 @@ public class Calculator implements ActionListener{ // actionlistener is a java a
         panel = new JPanel();
         panel.setBounds(50,100,300,300);
         panel.setLayout(new GridLayout(4,4,10,10));
-        panel.setBackground(Color.GRAY);
+        panel.setBackground(Color.BLUE);
 
         // added 1 2 3 button to the panel and add button
         panel.add(numberButtons[1]);
